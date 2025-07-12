@@ -1,0 +1,85 @@
+<div id="carouselExampleCaptions" class="carousel slide mt-1 card-neoraised">
+
+    <div class="carousel-inner">
+
+        <?php foreach ($slider as $key => $value) : ?>
+            <div class="carousel-item <?php echo $key == 0 ? 'active' : '' ?>">
+                <img src="<?php echo $this->config->item('url_slider') . $value['foto_slider'] ?>" class="d-block w-100 card-neoraised">
+                <div class="carousel-caption d-none d-md-block fs-1 fw-bold text-dark text-shadow">
+                    <?php echo $value['caption_slider'] ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <a class="carousel-control-prev-icon btn btn-lg btn-danger btn-neoraised p-4" aria-hidden="true"></a>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <a class="carousel-control-next-icon btn btn-lg btn-danger btn-neoraised p-4" aria-hidden="true"></a>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<section class="bg-white py-5">
+    <div class="container">
+        <h5 class="text-center mb-5 fw-bold fs-3">Kategori Produk</h5>
+        <div class="row">
+            <?php foreach ($kategori as $key => $value) : ?>
+                <div class="col-md-3 text-center">
+                    <a href="<?php echo base_url('kategori/detail/' . $value['id_kategori']) ?>" class="text-decoration-none">
+                        <img src="<?php echo $this->config->item('url_kategori') . $value['foto_kategori'] ?>" alt="" class="w-50 rounded-circle card card-neoraised offset-3">
+                    </a>
+
+                    <h5 class="mt-3 fs-5 fw-bold"><?php echo $value['nama_kategori'] ?></h5>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-5">
+    <div class="container">
+        <h5 class="text-center mb-5 fw-bold fs-3">Produk Terbaru</h5>
+        <div class="row">
+            <?php foreach ($produk as $key => $value) : ?>
+                <div class="col-md-3 d-flex">
+                    <a href="<?php echo base_url('produk/detail/' . $value['id_produk']) ?>" class="text-decoration-none w-100">
+                        <div class="card mb-3 border-0 h-100 d-flex flex-column">
+
+                            <img src="<?php echo $this->config->item('url_produk') . $value['foto_produk'] ?>" alt="" style="object-fit: contain; width: 100%; height: 400px;">
+
+                            <div class="card-body text-center d-flex flex-column">
+                                <h6 class="fs-5 fw-bold"><?php echo $value['nama_produk'] ?></h6>
+
+                                <div class="mt-auto">
+                                    <span class="fs-6 fw-medium badge bg-danger card-neoraised">
+                                        Rp. <?php echo number_format($value['harga_produk']) ?>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-white py-5">
+    <div class="container">
+        <h5 class="text-center mb-5 fw-bold fs-3">Artikel Terbaru</h5>
+        <div class="row">
+            <?php foreach ($artikel as $key => $value) : ?>
+                <div class="col-md-3">
+                    <img src="<?php echo $this->config->item('url_artikel') . $value['foto_artikel'] ?>" alt="" class="w-100 card card-neoraised">
+                    <h6 class="mt-3 fs-5 fw-bold"><?php echo $value['judul_artikel'] ?></h6>
+                    <p class="lead text-muted fs-6"><?php echo $value['isi_artikel'] ?></p>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
