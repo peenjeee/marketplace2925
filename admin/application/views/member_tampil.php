@@ -1,7 +1,7 @@
-<div class="container">
-    <h5>Data Member</h5>
+<div class="container mt-4">
+    <h5 class="fw-bold fs-3">Data Member</h5>
 
-    <table class="table table-bordered" id="tabelku">
+    <table class="table table-borderless card-neoraised border border-dark border-3" id="tabelku">
         <thead>
             <tr>
                 <th>No</th>
@@ -15,13 +15,13 @@
         <tbody>
             <?php foreach ($member as $k => $v): ?>
                 <tr>
-                    <td><?php echo $k + 1 ?></td>
-                    <td><?php echo $v['nama_member'] ?></td>
-                    <td><?php echo $v['email_member'] ?></td>
-                    <td><?php echo $v['nama_distrik_member'] ?></td>
-                    <td><?php echo $v['wa_member'] ?></td>
-                    <td>
-                        <a href="<?php echo base_url('member/detail/'.$v['id_member'].'') ?>" class="btn btn-info">Detail</a>
+                    <td class="fw-medium"><?php echo $k + 1 ?></td>
+                    <td class="fw-medium"><?php echo $v['nama_member'] ?></td>
+                    <td class="fw-medium"><?php echo $v['email_member'] ?></td>
+                    <td class="fw-medium"><?php echo $v['nama_distrik_member'] ?></td>
+                    <td class="fw-medium"><?php echo $v['wa_member'] ?></td>
+                    <td class="fw-medium">
+                        <a href="<?php echo base_url('member/detail/' . $v['id_member'] . '') ?>" class="btn btn-info btn-neoraised fw-bold">Detail</a>
                     </td>
                 </tr>
             <?php endforeach ?>

@@ -1,9 +1,9 @@
-<div class="container">
-    <h5>Edit Slider</h5>
+<div class="container mt-4">
+    <h5 class="fw-bold fs-3">Edit Slider</h5>
 
     <form action="" method="post" enctype="multipart/form-data">
-        <div class="mb-3 form-group">
-            <label for="">Caption slider</label>
+        <label for="" class="fw-bold form-label">Caption slider</label>
+        <div class="mb-3 form-group card card-neoraised rounded">
 
             <textarea name="caption_slider" class="form-control" id="editorku"><?= set_value('caption_slider', $slider['caption_slider']) ?></textarea>
             <span class="text-danger small">
@@ -11,13 +11,13 @@
             </span>
         </div>
         <div class="mb-3 form-group">
-            <label for="">Foto Lama</label><br>
-            <img src="<?= $this->config->item('url_slider') . $slider['foto_slider'] ?>" width="300" alt="">
+            <label for="" class="fw-bold form-label">Foto Lama</label><br>
+            <img src="<?= $this->config->item('url_slider') . $slider['foto_slider'] ?>" width="300" alt="" class="card-neoraised">
         </div>
         <div class="mb-3 form-group">
-            <label for="">Ganti foto slider</label>
-            <input type="file" name="foto_slider" class="form-control" id="">
+            <label for="" class="fw-bold form-label">Ganti foto slider</label>
+            <input type="file" name="foto_slider" class="form-control card-neoraised fw-light" id="">
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-primary btn-neoraised fw-bold">Simpan</button>
     </form>
 </div>

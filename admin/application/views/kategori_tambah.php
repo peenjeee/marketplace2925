@@ -1,18 +1,18 @@
-<div class="container">
-    <h5>Tambah Kategori</h5>
+<div class="container mt-4">
+    <h5 class="fw-bold fs-3">Tambah Kategori</h5>
 
     <form action="" method="post" enctype="multipart/form-data">
         <div class="mb-3 form-group">
-            <label for="">Nama Kategori</label>
-            <input type="text" name="nama_kategori" class="form-control" id="" value="<?php echo set_value('nama_kategori') ?>">
+            <label for="" class="form-label fw-medium">Nama Kategori</label>
+            <input type="text" name="nama_kategori" class="form-control card-neoraised fw-light" id="" value="<?php echo set_value('nama_kategori') ?>">
             <div class="text-danger small">
                 <?php echo form_error('nama_kategori') ?>
             </div>
         </div>
         <div class="mb-3 form-group">
-            <label for="">Foto Kategori</label>
-            <input type="file" name="foto_kategori" class="form-control" id="">
+            <label for="" class="form-label fw-medium">Foto Kategori</label>
+            <input type="file" name="foto_kategori" class="form-control card-neoraised fw-light" id="">
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-primary btn-neoraised fw-bold">Simpan</button>
     </form>
 </div>

@@ -36,6 +36,9 @@ $config['url_slider'] = 'http://localhost/marketplace2925/assets/slider/';
 $config['assets_artikel'] = $_SERVER["DOCUMENT_ROOT"] . "/marketplace2925/assets/artikel/";
 $config['url_artikel'] = 'http://localhost/marketplace2925/assets/artikel/';
 
+$config['assets_logo'] = $_SERVER["DOCUMENT_ROOT"] . "/marketplace2925/assets/logo.png";
+$config['url_logo'] = 'http://localhost/marketplace2925/assets/logo.png';
+
 /*
 |--------------------------------------------------------------------------
 | Index File

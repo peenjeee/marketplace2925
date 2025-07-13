@@ -31,5 +31,14 @@
             </div>
         </div>
 
+        <div class="col-md-3">
+            <div class="card text-bg-info card-body mb-3 card-neoraised border border-1 border-dark">
+                <div class="card-header text-bg-info"><?php echo $this->session->userdata('nama_member') ?></div>
+                <div class="card-body text-bg-info">
+                    <a href="<?php echo base_url('akun') ?>" class="btn btn-sm btn-light btn-neoraised w-100 fw-bold">Ubah Akun</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>

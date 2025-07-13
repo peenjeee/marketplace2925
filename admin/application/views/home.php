@@ -1,6 +1,6 @@
-<div class="container">
-    <h5>Selamat datang admin marketplace</h5>
-    <p class="lead">Melalui panel ini Anda dapat mengelola kategori produk dan transaksi yang terjadi di marketplace</p>
+<div class="container mt-4">
+    <h5 class="fw-bold fs-3">Admin Marketplace</h5>
+    <p class="lead mb-3">Melalui panel ini Anda dapat mengelola kategori produk dan transaksi yang terjadi di marketplace.</p>
 
     <div id="grafik-member-distrik" class="mt-5"></div>
 </div>
@@ -14,10 +14,10 @@
             type: 'pie'
         },
         title: {
-            text: 'Jumlah Member Berdasarkan Distrik'
+            text: '<b>Jumlah Member Berdasarkan Distrik</b>'
         },
         tooltip: {
-            valueSuffix: ' Orang'
+            valueSuffix: ' <b>Orang</b>'
 
         },
         plotOptions: {
@@ -45,11 +45,11 @@
             }
         },
         series: [{
-            name: 'Jumlah',
+            name: '<b>Jumlah',
             colorByPoint: true,
             data: [
                 <?php foreach ($jumlah_member_distrik as $key => $value): ?> {
-                        name: '<?php echo $value['nama_distrik_member'] ?>',
+                        name: '<b><?php echo $value['nama_distrik_member'] ?></b>',
                         y: <?php echo $value['jumlah'] ?>
                     },
                 <?php endforeach; ?>
