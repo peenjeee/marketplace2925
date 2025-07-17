@@ -1,0 +1,33 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Artikel extends CI_Controller
+{
+    function __construct()
+    {
+        parent::__construct();
+        // if (!$this->session->userdata('id_member')) {
+        //     redirect('/', 'refresh');
+        // }
+    }
+
+    public function index()
+    {
+        $this->load->model('Martikel');
+
+        $data['artikel'] = $this->Martikel->tampil_artikel();
+        $this->load->view('header');
+        $this->load->view('artikel_tampil', $data);
+        $this->load->view('footer');
+    }
+
+    public function detail()
+    {
+        $this->load->model('Martikel');
+
+        $data['artikel'] = $this->Martikel->tampil_artikel_detail();
+        $this->load->view('header');
+        $this->load->view('artikel_detail', $data);
+        $this->load->view('footer');
+    }
+}

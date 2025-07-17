@@ -22,6 +22,23 @@
     </button>
 </div>
 
+<section class="py-5">
+    <div class="container">
+        <h4 class="text-center fw-bold fs-3 mb-3">Cari Produk</h4>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="<?php echo base_url('produk/cari') ?>" method="get">
+                    <div class="input-group input-group-btn mb-3">
+                        <input type="text" name="keyword" class="form-control card-neoraised fw-light" placeholder="Cari Produk">
+
+                        <button class="btn btn-danger btn-neoraised" type="submit">Cari</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="bg-white py-5">
     <div class="container">
         <h5 class="text-center mb-5 fw-bold fs-3">Kategori Produk</h5>
@@ -77,9 +94,8 @@
                 <div class="col-md-3">
                     <img src="<?php echo $this->config->item('url_artikel') . $value['foto_artikel'] ?>" alt="" class="w-100 card card-neoraised">
                     <h6 class="mt-3 fs-5 fw-bold"><?php echo $value['judul_artikel'] ?></h6>
-                    <p class="lead text-muted fs-6"><?php echo $value['isi_artikel'] ?></p>
+                    <p class="lead text-muted fs-6"><?php echo substr($value['isi_artikel'], 0, 50) . (strlen($value['isi_artikel']) > 50 ? '...   ' : '       ') ?> <a href="<?php echo base_url('artikel/detail/' . $value['id_artikel']) ?>" class="text-decoration-none text-danger fw-bold">Baca selengkapnya</a></p>
                 </div>
             <?php endforeach; ?>
         </div>
-    </div>
 </section>

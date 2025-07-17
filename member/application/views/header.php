@@ -59,6 +59,9 @@
                         <a href="<?= base_url('produk') ?>" class="btn btn-neoraised btn-danger fw-bold">Produk</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="<?= base_url('artikel') ?>" class="btn btn-neoraised btn-danger fw-bold">Artikel</a>
+                    </li>
 
                     <?php if ($this->session->userdata('id_member')) : ?>
                         <li class="nav-item">

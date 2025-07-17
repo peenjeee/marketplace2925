@@ -10,4 +10,21 @@ class Martikel extends CI_Model
         $d = $q->result_array();
         return $d;
     }
+
+    function tampil_artikel()
+    {
+        $this->db->order_by('id_artikel', 'desc');
+        $q = $this->db->get('artikel');
+        $d = $q->result_array();
+        return $d;
+    }
+
+    function tampil_artikel_detail()
+    {
+        $id_artikel = $this->uri->segment(3);
+        $this->db->where('id_artikel', $id_artikel);
+        $q = $this->db->get('artikel');
+        $d = $q->row_array();
+        return $d;
+    }
 }

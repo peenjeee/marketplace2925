@@ -5,7 +5,7 @@
             <div class="col-md-6 offset-md-3">
                 <form action="<?php echo base_url('produk/cari') ?>" method="get">
                     <div class="input-group input-group-btn mb-3">
-                        <input type="text" name="keyword" class="form-control card-neoraised fw-light" placeholder="Cari Produk">
+                        <input type="text" name="keyword" class="form-control card-neoraised fw-light" placeholder="Cari Produk" value="<?php echo $keyword ?>">
 
                         <button class="btn btn-danger btn-neoraised" type="submit">Cari</button>
                     </div>
@@ -15,8 +15,8 @@
     </div>
 </section>
 
-<div class="container mt-4">
-    <h5 class="mb-5 fs-3 fw-bold mt-4">Produk Marketplace</h5>
+<div class="container">
+    <h5 class="mb-5 fs-3 fw-bold mt-4">Hasil Pencarian</h5>
 
     <div class="row">
         <?php foreach ($produk as $key => $value): ?>
