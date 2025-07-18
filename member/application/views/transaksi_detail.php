@@ -149,7 +149,7 @@
             <div class="row" id="payment-details" style="display: none;">
                 <div class="col-md-4">
 
-                    <button id="pay-button" class="btn btn-success btn-neoraised fw-bold mt-3">
+                <button id="pay-button" class="btn btn-success btn-neoraised fw-bold mt-3">
                         Bayar Sekarang
                     </button>
                 </div>
