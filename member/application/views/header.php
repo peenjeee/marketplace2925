@@ -49,7 +49,7 @@
     </div>
     <nav class="navbar navbar-neoraised-bottom navbar-expand-lg bg-warning  navbar-dark p-3">
         <div class="container">
-
+            <a href="" class="navbar-brand fw-bolder text-black">Marketplace</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#naff">
                 <span class="navbar-toggler-icon"></span>
             </button>
