@@ -145,7 +145,7 @@
         </div>
     <?php endif ?> -->
 
-        <?php if (empty($cekmidtrans)): ?>
+        <!-- <?php if (empty($cekmidtrans)): ?>
             <div class="row" id="payment-details" style="display: none;">
                 <div class="col-md-4">
 
@@ -154,7 +154,7 @@
                     </button>
                 </div>
             </div>
-        <?php endif ?>
+        <?php endif ?> -->
 
 
         <?php if (!empty($snapToken)) : ?>
