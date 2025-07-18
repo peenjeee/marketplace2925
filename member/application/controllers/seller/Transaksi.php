@@ -23,13 +23,15 @@ class Transaksi extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id_transaksi)
+    function detail($id_transaksi = NULL)
     {
-
+        if (!$id_transaksi) {
+            redirect('seller/transaksi', 'refresh');
+        }
         $this->load->model('Mtransaksi');
         $data['transaksi'] = $this->Mtransaksi->detail($id_transaksi);
 
-        if ($data['transaksi']['id_member_jual'] !== $this->session->userdata('id_member')) {
+        if (isset($data['transaksi']['id_member_jual']) && $data['transaksi']['id_member_jual'] !== $this->session->userdata('id_member')) {
             $this->session->set_flashdata('pesan_gagal', 'Tidak valid');
             redirect('seller/transaksi', 'refresh');
         }

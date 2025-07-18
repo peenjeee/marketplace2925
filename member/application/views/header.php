@@ -109,12 +109,12 @@
                     <ul class="navbar-nav ms-auto gap-3">
                         <li class="nav-item">
                             <button type="button" class="btn btn-neoraised btn-danger fw-bold" data-bs-toggle="modal" data-bs-target="#login">
-                                Login
+                                Masuk
                             </button>
                         </li>
 
                         <li class="nav-item">
-                            <a href="<?php echo base_url("register") ?>" class="btn btn-neoraised btn-danger fw-bold">Register</a>
+                            <a href="<?php echo base_url("register") ?>" class="btn btn-neoraised btn-danger fw-bold">Daftar</a>
                         </li>
 
                     </ul>

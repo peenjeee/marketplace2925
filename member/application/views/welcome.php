@@ -4,7 +4,7 @@
 
         <?php foreach ($slider as $key => $value) : ?>
             <div class="carousel-item <?php echo $key == 0 ? 'active' : '' ?>">
-                <img src="<?php echo $this->config->item('url_slider') . $value['foto_slider'] ?>" class="d-block w-100 card-neoraised" style="filter: brightness(1);">
+                <img src="<?php echo $this->config->item('url_slider') . $value['foto_slider'] ?>" class="d-block w-100 card-neoraised" style="filter: brightness(0.9);">
                 <div class="carousel-caption d-none d-md-block fs-1 fw-bold text-dark text-shadow" style="text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">
                     <?php echo $value['caption_slider'] ?>
                 </div>
@@ -13,11 +13,11 @@
 
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <a class="carousel-control-prev-icon btn btn-lg btn-danger btn-neoraised p-4" aria-hidden="true"></a>
+        <a class="carousel-control-prev-icon btn btn-lg btn-warning btn-neoraised p-4" aria-hidden="true"></a>
         <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <a class="carousel-control-next-icon btn btn-lg btn-danger btn-neoraised p-4" aria-hidden="true"></a>
+        <a class="carousel-control-next-icon btn btn-lg btn-warning btn-neoraised p-4" aria-hidden="true"></a>
         <span class="visually-hidden">Next</span>
     </button>
 </div>

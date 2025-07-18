@@ -66,7 +66,6 @@ $ci->load->library('url');
 		</div>
 	</footer> -->
 
-
 	<script>
 		window.addEventListener("scroll", function() {
 			if (window.scrollY > 100) {

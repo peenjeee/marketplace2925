@@ -30,9 +30,17 @@ class Produk extends CI_Controller
         $this->load->model('Mproduk');
         $data['kategori'] = $this->Mkategori->tampil();
 
+        $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required');
+        $this->form_validation->set_rules('harga_produk', 'Harga Produk', 'required|numeric');
+        $this->form_validation->set_rules('berat_produk', 'Berat Produk', 'required|numeric');
+        $this->form_validation->set_rules('deskripsi_produk', 'Deskripsi Produk', 'required');
+
+        $this->form_validation->set_message('required', '%s wajib diisi');
+        $this->form_validation->set_message('numeric', '%s harus berupa angka');
+
         $inputan = $this->input->post();
 
-        if ($inputan) {
+        if ($this->form_validation->run() == TRUE) {
             $this->Mproduk->simpan($inputan);
             $this->session->set_flashdata('pesan_sukses', 'Produk Tersimpan');
             redirect('seller/produk', 'refresh');
@@ -43,17 +51,29 @@ class Produk extends CI_Controller
         $this->load->view('footer');
     }
 
-    function edit($id_produk)
+    function edit($id_produk = NULL)
     {
+        if (!$id_produk) {
+            redirect('seller/produk', 'refresh');
+        }
+
         $this->load->model('Mproduk');
         $data['produk'] = $this->Mproduk->detail($id_produk);
 
         $this->load->model('Mkategori');
         $data['kategori'] = $this->Mkategori->tampil();
 
+        $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required');
+        $this->form_validation->set_rules('harga_produk', 'Harga Produk', 'required|numeric');
+        $this->form_validation->set_rules('berat_produk', 'Berat Produk', 'required|numeric');
+        $this->form_validation->set_rules('deskripsi_produk', 'Deskripsi Produk', 'required');
+
+        $this->form_validation->set_message('required', '%s wajib diisi');
+        $this->form_validation->set_message('numeric', '%s harus berupa angka');
+
         $inputan = $this->input->post();
 
-        if ($inputan) {
+        if ($this->form_validation->run() == TRUE) {
             $this->Mproduk->ubah($inputan, $id_produk);
             $this->session->set_flashdata('pesan_sukses', 'Produk Tersimpan');
             redirect('seller/produk', 'refresh');
@@ -64,8 +84,12 @@ class Produk extends CI_Controller
         $this->load->view('footer');
     }
 
-    function hapus($id_produk)
+    function hapus($id_produk = NULL)
     {
+        if (!$id_produk) {
+            redirect('seller/produk', 'refresh');
+        }
+
         $this->load->model('Mproduk');
         $this->Mproduk->hapus($id_produk);
         $this->session->set_flashdata('pesan_sukses', 'Produk telah dihapus');

@@ -10,7 +10,7 @@
                     <div class="mb-3">
                         <label for="" class="fw-bold">Username</label>
                         <input type="text" name="email_member" class="form-control card-neoraised fw-light" value="<?php echo set_value('email_member') ?>">
-                        <div class="text-danger small">
+                        <div class="text-black small fst-italic mt-2">
                             <?php echo form_error('email_member') ?>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                         <label for="" class="fw-bold">Password</label>
                         <input type="password" name="password_member" class="form-control card-neoraised fw-light" value="<?php echo set_value('password_member') ?>">
                     </div>
-                    <div class="text-danger small">
+                    <div class="text-black small fst-italic">
                         <?php echo form_error('password_member') ?>
                     </div>
                     <button class="btn btn-neoraised btn-danger fw-bold">Login</button>
@@ -35,7 +35,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+<!-- <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script> -->
+<script src="<?= base_url('public/js/dataTable.js'); ?>"></script>
 <!-- <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script> -->
 <script src="<?= base_url('public/js/table.js'); ?>"></script>
 
@@ -44,6 +45,9 @@
 
 <script>
     new DataTable('#tabelku');
+</script>
+<script>
+    new DataTable('#tabelku1');
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

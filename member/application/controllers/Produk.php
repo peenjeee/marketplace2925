@@ -19,8 +19,11 @@ class Produk extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id_produk)
+    function detail($id_produk = NULL)
     {
+        if (!$id_produk) {
+            redirect('produk', 'refresh');
+        }
         $this->load->model('Mproduk');
         $data['produk'] = $this->Mproduk->detail_umum($id_produk);
 

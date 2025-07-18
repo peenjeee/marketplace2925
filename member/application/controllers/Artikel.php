@@ -21,11 +21,14 @@ class Artikel extends CI_Controller
         $this->load->view('footer');
     }
 
-    public function detail()
+    public function detail($id_artikel = NULL)
     {
+        if (!$id_artikel) {
+            redirect('artikel', 'refresh');
+        }
         $this->load->model('Martikel');
 
-        $data['artikel'] = $this->Martikel->tampil_artikel_detail();
+        $data['artikel'] = $this->Martikel->tampil_artikel_detail($id_artikel);
         $this->load->view('header');
         $this->load->view('artikel_detail', $data);
         $this->load->view('footer');

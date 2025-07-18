@@ -20,7 +20,7 @@
 
     <div class="row">
         <?php foreach ($produk as $key => $value) : ?>
-            <div class="col-md-3 d-flex" data-aos="fade-up">
+            <div class="col-md-3 d-flex mb-5" data-aos="fade-up">
                 <a href="<?php echo base_url('produk/detail/' . $value['id_produk']) ?>" class="text-decoration-none w-100">
                     <div class="card mb-3 border-0 h-100 d-flex flex-column" style="transition: all .3s ease-in-out;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
 

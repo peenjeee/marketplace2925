@@ -23,8 +23,11 @@ class Keranjang extends CI_Controller
         $this->load->view('footer');
     }
 
-    function hapus($id_keranjang)
+    function hapus($id_keranjang = NULL)
     {
+        if (!$id_keranjang) {
+            redirect('keranjang', 'refresh');
+        }
         $this->load->model('Mkeranjang');
         $this->Mkeranjang->hapus($id_keranjang);
 
@@ -34,6 +37,10 @@ class Keranjang extends CI_Controller
 
     function checkout($id_member_jual)
     {
+        if (!$id_member_jual) {
+            redirect('keranjang', 'refresh');
+        }
+
         $this->load->model('Mkeranjang');
         $totalberat = 0;
         $data['keranjang'] = $this->Mkeranjang->tampil_member_jual($id_member_jual);

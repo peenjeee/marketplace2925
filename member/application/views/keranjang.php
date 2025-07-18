@@ -9,7 +9,7 @@
     <?php endif ?>
 
 
-    <h2 class="mb-5 mt-4">Keranjang Saya</h2>
+    <h2 class="mb-5 mt-4 fw-bold fs-3">Keranjang Saya</h2>
 
     <?php foreach ($keranjang as $k => $per_penjual) : ?>
         <div class="mb-5">

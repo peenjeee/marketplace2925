@@ -22,8 +22,11 @@ class Kategori extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id)
+    function detail($id = NULL)
     {
+        if (!$id) {
+            redirect('kategori', 'refresh');
+        }
         $this->load->model('Mkategori');
         $data['kategori'] = $this->Mkategori->detail($id);
         $data['produk'] = $this->Mkategori->produk($id);

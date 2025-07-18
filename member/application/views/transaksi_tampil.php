@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <h5 class="fw-bold fs-3">Data Transaksi Beli <?php echo $this->session->userdata('nama_member') ?></h5>
-    <table class="table table-borderless card-neoraised border border-dark border-3" id="tabelku">
+    <table class="table table-borderless card-neoraised border border-dark border-3" id="tabelku1">
         <thead>
             <tr>
                 <th>No</th>

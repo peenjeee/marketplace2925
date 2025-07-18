@@ -31,12 +31,18 @@
             <tr>
                 <th>No</th>
                 <th>Produk</th>
-                <th>Jumlah Terjual</th>
+                <th>Jumlah Produk Terjual</th>
                 <th>Nominal Terjual</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($laporan_terjual as $key => $value): ?>
+            <?php
+            $total_pendapatan = 0;
+            $total_jumlah_terjual = 0;
+            foreach ($laporan_terjual as $key => $value):
+                $total_pendapatan += $value['nominal_terjual'];
+                $total_jumlah_terjual += $value['jumlah_terjual'];
+            ?>
                 <tr>
                     <td class="fw-medium"><?php echo $key + 1 ?></td>
                     <td class="fw-medium"><?php echo $value['nama_beli'] ?></td>
@@ -45,6 +51,13 @@
                 </tr>
             <?php endforeach ?>
         </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2" class="fw-medium">Total Produk Terjual</th>
+                <th class="fw-medium"><?php echo $total_jumlah_terjual ?></th>
+                <th class="fw-medium"><?php echo number_format($total_pendapatan) ?></th>
+            </tr>
+        </tfoot>
     </table>
 </div>
 

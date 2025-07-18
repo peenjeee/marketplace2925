@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h5 class="mb-5 fs-3 fw-bold mt-4">Artikel News</h5>
+    <h5 class="mb-5 fs-3 fw-bold mt-4">Artikel Berita</h5>
 
     <div class="row">
         <?php foreach ($artikel as $key => $value) : ?>

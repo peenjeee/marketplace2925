@@ -31,7 +31,7 @@
         </form>
     </div>
 <?php else: ?>
-    <h1 class="text-center mt-5">Artikel tidak ditemukan.</h1>
+    <h1 class="fw-bold text-center mt-5">Artikel tidak ditemukan.</h1>
     <div class="d-flex justify-content-center mt-5">
         <a href="<?= base_url('artikel'); ?>" class="btn btn-primary btn-neoraised fw-bold">Kembali</a>
     </div>

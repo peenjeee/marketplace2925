@@ -13,7 +13,7 @@
                 <div class="mb-3">
                     <label for="" class="form-label fw-bold">Password</label>
                     <input type="password_member" name="password_member" class="form-control card-neoraised fw-light">
-                    <p class="text-danger fst-italic mt-1">Kosongkan jika password tidak diubah</p>
+                    <p class="text-danger fst-italic">Kosongkan jika password tidak diubah</p>
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label fw-bold">Nama Lengkap</label>

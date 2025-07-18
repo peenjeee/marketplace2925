@@ -18,7 +18,7 @@
                     <td class="fw-medium"><?php echo number_format($v['total_transaksi']) ?></td>
                     <td class="fw-medium">
                         <span class="badge bg-info card-neoraised mb-2 fs-6"><?php echo $v['status_transaksi'] ?></span>
-                        <h6>Resi : <?php echo $v['resi_ekspedisi'] ?></h6>
+                        <h6 class="fw-medium">Resi : <?php echo $v['resi_ekspedisi'] ?></h6>
                     </td>
                     <td class="fw-medium">
                         <a href="<?php echo base_url('seller/transaksi/detail/' . $v['id_transaksi'] . '') ?>" class="btn btn-primary btn-neoraised fw-bold">Detail</a>

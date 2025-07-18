@@ -61,8 +61,8 @@
                 <select name="ongkir" class="form-control mb-3 card-neoraised" id="" required>
                     <option value="">Pilih</option>
                     <?php foreach ($biaya['costs'] as $key => $value) : ?>
-                        <option value="<?php echo $key ?>"><?php echo $value['description'] ?>
-                            <?php echo number_format($value['cost'][0]['value']) ?>
+                        <option value="<?php echo $key ?>"><?php echo $value['description'] ?> |
+                            <?php echo number_format($value['cost'][0]['value']) ?> |
                             <?php echo $value['cost'][0]['etd'] ?> Hari
                         </option>
                     <?php endforeach; ?>

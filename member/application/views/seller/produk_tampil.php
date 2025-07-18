@@ -2,7 +2,7 @@
 
     <?php if (empty($produk)): ?>
         <div class="alert alert-warning card-neoraised mt-4 fw-bold fs-6" role="alert">
-            Anda belum mempunyai produk, silahkan tambah produk untuk memulai jualan
+            Anda belum memeliki produk, silahkan tambah produk untuk memulai jualan
         </div>
     <?php endif ?>
 
