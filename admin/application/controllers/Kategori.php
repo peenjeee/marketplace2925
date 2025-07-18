@@ -14,7 +14,7 @@ class Kategori extends CI_Controller
     public function index()
     {
 
-       
+
         $this->load->model('Mkategori');
 
         $data['kategori'] = $this->Mkategori->tampil();
@@ -47,8 +47,12 @@ class Kategori extends CI_Controller
         $this->load->view('footer');
     }
 
-    function hapus($id_kategori)
+    function hapus($id_kategori = NULL)
     {
+        if (!$id_kategori) {
+            redirect('kategori', 'refresh');
+        }
+
         $this->load->model('Mkategori');
         $this->Mkategori->hapus($id_kategori);
 
@@ -57,8 +61,11 @@ class Kategori extends CI_Controller
         redirect('kategori', 'refresh');
     }
 
-    function edit($id_kategori)
+    function edit($id_kategori = NULL)
     {
+        if (!$id_kategori) {
+            redirect('kategori', 'refresh');
+        }
 
         $this->load->model('Mkategori');
         $data['kategori'] = $this->Mkategori->detail($id_kategori);

@@ -31,7 +31,7 @@
                     <div class="mb-3">
                         <label for="" class="form-label fw-bold fs-5">Username</label>
                         <input type="text" name="username" class="form-control card-neoraised fw-light" value="<?php echo set_value('username') ?>">
-                        <div class="text-danger small fst-italic">
+                        <div class="text-black small fst-italic mt-1">
                             <?php echo form_error('username') ?>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         <label for="" class="form-label fw-bold fs-5">Password</label>
                         <input type="password" name="password" class="form-control card-neoraised fw-light" value="<?php echo set_value('password') ?>">
                     </div>
-                    <div class="text-danger small fst-italic">
+                    <div class="text-black small fst-italic">
                         <?php echo form_error('password') ?>
                     </div>
                     <button class="btn btn-danger btn-neoraised fw-bold">Login</button>

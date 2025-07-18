@@ -998,7 +998,7 @@
 	$.extend( DataTable.ext.classes, {
 		container: 'dt-container',
 		empty: {
-			row: 'dt-empty'
+			row: 'dt-empty text-danger'
 		},
 		info: {
 			container: 'dt-info'

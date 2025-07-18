@@ -7,7 +7,7 @@
         <div class="mb-3 form-group card card-neoraised rounded">
             <textarea name="caption_slider" class="form-control card-neoraised fw-light" id="editorku"><?php echo set_value('caption_slider') ?></textarea>
 
-            <div class="text-danger small">
+            <div class="text-danger small fst-italic mt-1">
                 <?php echo form_error('caption_slider') ?>
             </div>
         </div>

@@ -19,7 +19,6 @@
                     <td class="fw-medium"><?php echo $v['status_transaksi'] ?></td>
                     <td>
                         <a href="<?php echo base_url('transaksi/detail/' . $v['id_transaksi'] . '') ?>" class="btn btn-info btn-neoraised fw-bold">Detail</a>
-
                     </td>
                 </tr>
             <?php endforeach ?>

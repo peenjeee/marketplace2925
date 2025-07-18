@@ -15,7 +15,7 @@
                     <td class="fw-medium"><?php echo $k + 1 ?></td>
                     <td class="fw-medium"><?php echo $v['nama_kategori'] ?></td>
                     <td class="fw-medium">
-                        <img src="<?php echo $this->config->item('url_kategori') . $v['foto_kategori'] ?>" alt="" width="200">
+                        <img src="<?php echo $this->config->item('url_kategori') . $v['foto_kategori'] ?>" alt="" width="150" class="card card-neoraised rounded-circle">
                     </td>
                     <td class="d-flex gap-3">
                         <a href="<?php echo base_url('kategori/edit/' . $v['id_kategori'] . '') ?>" class="btn btn-warning fw-bold btn-neoraised">Edit</a>

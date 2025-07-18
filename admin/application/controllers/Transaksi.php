@@ -18,8 +18,11 @@ class Transaksi extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id_transaksi)
+    function detail($id_transaksi = NULL)
     {
+        if (!$id_transaksi) {
+            redirect('transaksi', 'refresh');
+        }
 
         $this->load->model('Mtransaksi');
         $data['transaksi'] = $this->Mtransaksi->detail($id_transaksi);

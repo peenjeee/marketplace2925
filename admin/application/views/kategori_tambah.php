@@ -5,7 +5,7 @@
         <div class="mb-3 form-group">
             <label for="" class="form-label fw-medium">Nama Kategori</label>
             <input type="text" name="nama_kategori" class="form-control card-neoraised fw-light" id="" value="<?php echo set_value('nama_kategori') ?>">
-            <div class="text-danger small">
+            <div class="text-danger small fst-italic mt-1">
                 <?php echo form_error('nama_kategori') ?>
             </div>
         </div>

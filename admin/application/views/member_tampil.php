@@ -1,6 +1,5 @@
 <div class="container mt-4">
     <h5 class="fw-bold fs-3">Data Member</h5>
-
     <table class="table table-borderless card-neoraised border border-dark border-3" id="tabelku">
         <thead>
             <tr>

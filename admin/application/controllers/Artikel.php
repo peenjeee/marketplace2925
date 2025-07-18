@@ -47,19 +47,25 @@ class Artikel extends CI_Controller
         $this->load->view('footer');
     }
 
-    function hapus($id_artikel)
+    function hapus($id_artikel = NULL)
     {
+        if (!$id_artikel) {
+            redirect('artikel', 'refresh');
+        }
+
         $this->load->model('Martikel');
         $this->Martikel->hapus($id_artikel);
-
         $this->session->set_flashdata('pesan_sukses', 'artikel telah terhapus');
 
         redirect('artikel', 'refresh');
     }
 
-    function edit($id_artikel)
+    function edit($id_artikel = NULL)
     {
-
+        if (!$id_artikel) {
+            redirect('artikel', 'refresh');
+        }
+        
         $this->load->model('Martikel');
         $data['artikel'] = $this->Martikel->detail($id_artikel);
 

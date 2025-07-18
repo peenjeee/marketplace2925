@@ -1,100 +1,72 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
-
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-		text-decoration: none;
-	}
-
-	a:hover {
-		color: #97310e;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-		min-height: 96px;
-	}
-
-	p {
-		margin: 0 0 10px;
-		padding:0;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="<?php echo $this->config->item('url_logo') ?>" type="image/png" sizes="64x64">
+	<title>Admin Marketplace</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+		rel="stylesheet" />
+	<script type="module" crossorigin src="<?= base_url('public/js/all.min.js') ?>"></script>
+	<link rel="stylesheet" crossorigin href="<?= base_url('public/css/all.css') ?>">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
+<style>
+	.scroll-top {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		display: none;
+		z-index: 1000;
+	}
+</style>
+
 <body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="userguide3/">User Guide</a>.</p>
+	<div class="d-flex align-items-center justify-content-center vh-100">
+		<div class="text-center">
+			<h1 class="display-1 fw-bold text-dark mb-0">Wellcome</h1>
+			<h2 class="display-6 fw-semibold text-secondary mb-3">
+				Admin Marketplace
+			</h2>
+			<p class="text-muted mb-4 fs-4">
+				Klik tombol di bawah untuk kembali ke beranda.
+			</p>
+			<div class="d-flex justify-content-center">
+				<a href="<?= base_url('home'); ?>" class="btn btn-primary btn-neoraised btn-lg fw-bold"> Redirect</a>
+			</div>
+		</div>
 	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
+	<!-- <footer class="mt-5 py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mx-auto text-center">
+					&copy; Copyright 2024,
+					<a href="https://github.com/RamsNotes31/outdooria-fp" class="text-decoration-none text-dark fw-bold" target="_blank">Outdooria</a>.
+				</div>
+			</div>
+		</div>
+	</footer> -->
+	</div>
 </body>
+<!-- <script>
+	window.addEventListener("scroll", function() {
+		if (window.scrollY > 100) {
+			document.querySelector(".scroll-top").style.display = "block";
+		} else {
+			document.querySelector(".scroll-top").style.display = "none";
+		}
+	});
+	document.querySelector(".scroll-top").addEventListener("click", function() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
+</script> -->
+
 </html>

@@ -21,7 +21,11 @@ class Member extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id_member){
+    function detail($id_member = NULL)
+    {
+        if (!$id_member) {
+            redirect('member', 'refresh');
+        }
 
         $this->load->model('Mmember');
         $data['member'] = $this->Mmember->detail($id_member);

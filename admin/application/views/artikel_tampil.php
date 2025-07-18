@@ -15,7 +15,7 @@
                     <td class="fw-medium"><?php echo $k + 1 ?></td>
                     <td class="fw-medium"><?php echo $v['judul_artikel'] ?></td>
                     <td class="fw-medium">
-                        <img src="<?php echo $this->config->item('url_artikel') . $v['foto_artikel'] ?>" alt="" width="200">
+                        <img src="<?php echo $this->config->item('url_artikel') . $v['foto_artikel'] ?>" alt="" width="200" class="card-neoraised">
                     </td>
                     <td class="d-flex gap-3">
                         <a href="<?php echo base_url('artikel/edit/' . $v['id_artikel'] . '') ?>" class="btn btn-warning card-neoraised fw-bold">Edit</a>

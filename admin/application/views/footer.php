@@ -4,7 +4,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+<!-- <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script> -->
+<script src="<?= base_url('public/js/dataTable.js'); ?>"></script>
+
 <!-- <script src="https://cdn.datatables.net/2.2.2/js/dataTables.bootstrap5.js"></script> -->
 <script src="<?= base_url('public/js/table.js'); ?>"></script>
 
@@ -12,6 +15,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.22.1/ckeditor.js"></script>
 <script>
     new DataTable('#tabelku');
+</script>
+<script>
+    new DataTable('#tabelku1');
 </script>
 <?php if ($this->session->flashdata('pesan_sukses')) : ?>
     <script>

@@ -47,8 +47,11 @@ class Slider extends CI_Controller
         $this->load->view('footer');
     }
 
-    function hapus($id_slider)
+    function hapus($id_slider = NULL)
     {
+        if (!$id_slider) {
+            redirect('slider', 'refresh');
+        }
         $this->load->model('Mslider');
         $this->Mslider->hapus($id_slider);
 
@@ -57,8 +60,12 @@ class Slider extends CI_Controller
         redirect('slider', 'refresh');
     }
 
-    function edit($id_slider)
+    function edit($id_slider = NULL)
     {
+        if (!$id_slider) {
+            redirect('slider', 'refresh');
+        }
+
 
         $this->load->model('Mslider');
         $data['slider'] = $this->Mslider->detail($id_slider);

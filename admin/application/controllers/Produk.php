@@ -18,12 +18,15 @@ class Produk extends CI_Controller
         $this->load->view('footer');
     }
 
-    function detail($id_produk)
+    function detail($id_produk = NULL)
     {
+        if (!$id_produk) {
+            redirect('produk', 'refresh');
+        }
         $this->load->model('Mproduk');
         $data['produk'] = $this->Mproduk->detail($id_produk);
         $this->load->view('header');
         $this->load->view('produk_detail', $data);
         $this->load->view('footer');
     }
-} 
+}

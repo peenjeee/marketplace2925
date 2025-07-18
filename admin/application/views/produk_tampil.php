@@ -16,7 +16,7 @@
                     <td class="fw-medium"><?php echo $k + 1 ?></td>
                     <td class="fw-medium"><?php echo $v['nama_produk'] ?></td>
                     <td class="fw-medium"><?php echo number_format($v['harga_produk']) ?></td>
-                    <td class="fw-medium"><img src="<?php echo $this->config->item('url_produk') . $v['foto_produk'] ?>" alt="" width="100"></td>
+                    <td class="fw-medium"><img src="<?php echo $this->config->item('url_produk') . $v['foto_produk'] ?>" alt="" width="100" class="card card-neoraised"></td>
                     <td>
                         <a href="<?php echo base_url('produk/detail/' . $v['id_produk'] . '') ?>" class="btn btn-info btn-neoraised fw-bold">Detail</a>
 

@@ -15,7 +15,7 @@
                     <td class="fw-medium"><?php echo $k + 1 ?></td>
                     <td class="fw-medium"><?php echo $v['caption_slider'] ?></td>
                     <td class="fw-medium">
-                        <img src="<?php echo $this->config->item('url_slider') . $v['foto_slider'] ?>" alt="" width="200">
+                        <img src="<?php echo $this->config->item('url_slider') . $v['foto_slider'] ?>" alt="" width="200" class="card-neoraised">
                     </td>
                     <td class="d-flex gap-3">
                         <a href="<?php echo base_url('slider/edit/' . $v['id_slider'] . '') ?>" class="btn btn-warning btn-neoraised fw-bold">Edit</a>

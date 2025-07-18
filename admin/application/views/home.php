@@ -17,7 +17,7 @@
             text: '<b>Jumlah Member Berdasarkan Distrik</b>'
         },
         tooltip: {
-            valueSuffix: ' <b>Orang</b>'
+            valueSuffix: ' <b>Member</b>'
 
         },
         plotOptions: {

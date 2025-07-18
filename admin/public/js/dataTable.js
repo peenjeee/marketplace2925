@@ -998,10 +998,10 @@
 	$.extend( DataTable.ext.classes, {
 		container: 'dt-container',
 		empty: {
-			row: 'dt-empty'
+			row: 'dt-empty text-danger fst-italic fw-medium',
 		},
 		info: {
-			container: 'dt-info'
+			container: 'dt-info fw-medium'
 		},
 		layout: {
 			row: 'dt-layout-row',
@@ -1013,7 +1013,7 @@
 			full: 'dt-layout-full'
 		},
 		length: {
-			container: 'dt-length fw-bold',
+			container: 'dt-length fw-medium',
 			select: 'dt-input'
 		},
 		order: {
@@ -1040,7 +1040,7 @@
 			}
 		},
 		search: {
-			container: 'dt-search fw-bold',
+			container: 'dt-search fw-medium',
 			input: 'dt-input fw-light'
 		},
 		table: 'dataTable',	
@@ -1058,8 +1058,8 @@
 		},
 		paging: {
 			active: 'current',
-			button: 'dt-paging-button',
-			container: 'dt-paging',
+			button: 'dt-paging-button fw-medium',
+			container: 'dt-paging  fw-medium',
 			disabled: 'disabled',
 			nav: ''
 		}

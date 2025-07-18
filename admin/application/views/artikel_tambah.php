@@ -6,7 +6,7 @@
             <label for="" class="form-label fw-medium">Judul artikel</label>
             <input type="text" name="judul_artikel" class="form-control card-neoraised fw-light" id="" value="<?php echo set_value('judul_artikel') ?>">
 
-            <div class="text-danger small fst-italic">
+            <div class="text-danger small fst-italic mt-1">
                 <?php echo form_error('judul_artikel') ?>
             </div>
         </div>
@@ -14,9 +14,9 @@
         <label for="" class="form-label fw-medium">Isi artikel</label>
         <div class="mb-3 form-group card card-neoraised rounded">
 
-            <textarea name="isi_artikel" class="form-control fw-light" id="editorku"><?php echo set_value('isi_artikel') ?></textarea>
+            <textarea name="isi_artikel" class="form-control fw-light" id="editorku" required><?php echo set_value('isi_artikel') ?></textarea>
 
-            <div class="text-danger small fst-italic">
+            <div class="text-danger small fst-italic mt-1">
                 <?php echo form_error('isi_artikel') ?>
             </div>
         </div>

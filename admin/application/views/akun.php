@@ -18,7 +18,7 @@
                 <div class="mb-3">
                     <label for="" class="form-label fw-bold">Nama Lengkap</label>
                     <input type="text" name="nama" class="form-control card-neoraised fw-light" value="<?php echo set_value('nama', $this->session->userdata('nama')) ?>">
-                    <span class="text-danger small mt-2">
+                    <span class="text-danger small fst-italic mt-2">
                         <?php echo form_error('nama') ?>
                     </span>
                 </div>
