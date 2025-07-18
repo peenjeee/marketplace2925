@@ -20,7 +20,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
+<style>
+    .scroll-top {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        display: none;
+        z-index: 1000;
+    }
+</style>
+
 <body>
+    <div class="scroll-top">
+        <button class="btn btn-neoraised btn-warning btn-md-lg">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </div>
     <nav class="navbar navbar-neoraised-bottom navbar-expand-lg bg-warning  navbar-dark p-3">
         <div class="container">
             <a href="" class="navbar-brand fw-bolder text-black">Dashboard</a>

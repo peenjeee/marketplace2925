@@ -22,7 +22,8 @@ $ci->load->library('url');
 	<link rel="stylesheet" crossorigin href="<?= base_url('public/css/all.css') ?>">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<!-- <style>
+
+<style>
 	.scroll-top {
 		position: fixed;
 		bottom: 1rem;
@@ -30,11 +31,16 @@ $ci->load->library('url');
 		display: none;
 		z-index: 1000;
 	}
-</style> -->
+</style>
 
 <!--  -->
 
 <body>
+	<div class="scroll-top">
+		<button class="btn btn-neoraised btn-warning btn-md-lg">
+			<i class="bi bi-chevron-up"></i>
+		</button>
+	</div>
 	<div class="d-flex align-items-center justify-content-center vh-100">
 		<div class="text-center">
 			<h1 class="display-1 fw-bold text-dark mb-0">Error</h1>
@@ -59,22 +65,25 @@ $ci->load->library('url');
 			</div>
 		</div>
 	</footer> -->
-	</div>
-</body>
-<!-- <script>
-	window.addEventListener("scroll", function() {
-		if (window.scrollY > 100) {
-			document.querySelector(".scroll-top").style.display = "block";
-		} else {
-			document.querySelector(".scroll-top").style.display = "none";
-		}
-	});
-	document.querySelector(".scroll-top").addEventListener("click", function() {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth"
+	
+
+	<script>
+		window.addEventListener("scroll", function() {
+			if (window.scrollY > 100) {
+				document.querySelector(".scroll-top").style.display = "block";
+			} else {
+				document.querySelector(".scroll-top").style.display = "none";
+			}
 		});
-	});
-</script> -->
+		document.querySelector(".scroll-top").addEventListener("click", function() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	</script>
+
+</body>
+
 
 </html>

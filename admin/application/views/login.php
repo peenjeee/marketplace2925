@@ -22,7 +22,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
+<style>
+    .scroll-top {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        display: none;
+        z-index: 1000;
+    }
+</style>
+
 <body style="background-image: url('<?php echo $this->config->item('url_logo') ?>'); height: 80vh; background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; justify-content: center; align-items: center;" class="bg-dark">
+    <div class="scroll-top">
+        <button class="btn btn-neoraised btn-warning btn-md-lg">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </div>
 
     <div class="container mt-5">
         <div class="row">
@@ -68,6 +83,23 @@
             });
         </script>
     <?php endif; ?>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 100) {
+                document.querySelector(".scroll-top").style.display = "block";
+            } else {
+                document.querySelector(".scroll-top").style.display = "none";
+            }
+        });
+        document.querySelector(".scroll-top").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
 </body>
 
 </html>

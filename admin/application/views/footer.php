@@ -31,6 +31,23 @@
 <script>
     CKEDITOR.replace('editorku');
 </script>
+
+<script>
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 100) {
+            document.querySelector(".scroll-top").style.display = "block";
+        } else {
+            document.querySelector(".scroll-top").style.display = "none";
+        }
+    });
+    document.querySelector(".scroll-top").addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
 </body>
 
 </html>

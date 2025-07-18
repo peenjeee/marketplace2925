@@ -27,6 +27,11 @@
 </style>
 
 <body>
+	<div class="scroll-top">
+		<button class="btn btn-neoraised btn-warning btn-md-lg">
+			<i class="bi bi-chevron-up"></i>
+		</button>
+	</div>
 	<div class="d-flex align-items-center justify-content-center vh-100">
 		<div class="text-center">
 			<h1 class="display-1 fw-bold text-dark mb-0">Wellcome</h1>
@@ -52,21 +57,24 @@
 		</div>
 	</footer> -->
 	</div>
-</body>
-<!-- <script>
-	window.addEventListener("scroll", function() {
-		if (window.scrollY > 100) {
-			document.querySelector(".scroll-top").style.display = "block";
-		} else {
-			document.querySelector(".scroll-top").style.display = "none";
-		}
-	});
-	document.querySelector(".scroll-top").addEventListener("click", function() {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth"
+
+
+	<script>
+		window.addEventListener("scroll", function() {
+			if (window.scrollY > 100) {
+				document.querySelector(".scroll-top").style.display = "block";
+			} else {
+				document.querySelector(".scroll-top").style.display = "none";
+			}
 		});
-	});
-</script> -->
+		document.querySelector(".scroll-top").addEventListener("click", function() {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	</script>
+
+</body>
 
 </html>

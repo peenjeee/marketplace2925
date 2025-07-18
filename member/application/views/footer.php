@@ -41,6 +41,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 <script>
     new DataTable('#tabelku');
 </script>
@@ -65,6 +66,23 @@
         });
     </script>
 <?php endif; ?>
+
+<script>
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 100) {
+            document.querySelector(".scroll-top").style.display = "block";
+        } else {
+            document.querySelector(".scroll-top").style.display = "none";
+        }
+    });
+    document.querySelector(".scroll-top").addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
 </body>
 
 </html>

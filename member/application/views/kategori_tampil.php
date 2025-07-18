@@ -2,17 +2,13 @@
     <h5 class="mb-5 mt-4 fw-bold fs-3">Kategori Produk</h5>
 
     <div class="row">
-        <?php foreach ($kategori as $key => $value): ?>
-            <div class="col-md-3 mb-3">
+        <?php foreach ($kategori as $key => $value) : ?>
+            <div class="col-md-3 text-center" data-aos="zoom-in">
                 <a href="<?php echo base_url('kategori/detail/' . $value['id_kategori']) ?>" class="text-decoration-none">
-                    <div class="card border-0">
-                        <img src="<?= $this->config->item('url_kategori') . $value['foto_kategori'] ?>" alt="" class="rounded-circle card card-neoraised w-50 offset-3">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold fs-5"><?= $value['nama_kategori'] ?></h6>
-                        </div>
-                    </div>
+                    <img src="<?php echo $this->config->item('url_kategori') . $value['foto_kategori'] ?>" alt="" class="w-50 rounded-circle card card-neoraised offset-3" style="transition: all .3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
                 </a>
 
+                <h5 class="mt-3 fs-5 fw-bold"><?php echo $value['nama_kategori'] ?></h5>
             </div>
         <?php endforeach; ?>
     </div>
