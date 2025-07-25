@@ -1,0 +1,286 @@
+/* ==========================================================================
+   SISTEM DESAIN BRUTALIS - REDESIGN HOT WHEELS (V2)
+   ========================================================================== */
+
+/* 1. Impor Font & Definisi
+   -------------------------------------------------------------------------- */
+   @import url('https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+   :root {
+       --color-background: #F5F5F5; /* Off-White */
+       --color-text: #111111;       /* Near Black */
+       --color-accent-blue: #0071BC;
+       --color-accent-flame: #FF4500;
+       --color-border: #CCCCCC;
+       
+       --font-display: 'Anton', sans-serif;
+       --font-ui: 'IBM Plex Mono', monospace;
+       --font-body: 'Inter', sans-serif;
+   }
+   
+   /* 2. Reset Global & Tipografi
+      -------------------------------------------------------------------------- */
+   body {
+       background-color: var(--color-background);
+       color: var(--color-text);
+       font-family: var(--font-body);
+   }
+   
+   h1, h2, h3, .font-display {
+       font-family: var(--font-display);
+       text-transform: uppercase;
+       letter-spacing: -0.02em;
+   }
+   
+   /* 3. Penyesuaian Komponen Bootstrap
+      -------------------------------------------------------------------------- */
+   
+   /* Hapus semua sudut melengkung dan bayangan untuk tampilan yang tajam dan datar */
+   .card, .btn, .form-control, .modal-content, .navbar, .badge, .carousel, .dropdown-menu {
+       border-radius: 0 !important;
+       box-shadow: none !important;
+       border: 2px solid var(--color-text);
+   }
+   
+   /* Gaya Tombol Brutalis */
+   .btn {
+       font-family: var(--font-ui);
+       font-weight: 700;
+       text-transform: uppercase;
+       border-width: 2px !important;
+       transition: background-color 0.1s linear, color 0.1s linear;
+   }
+   
+   .btn-hw-primary {
+       background-color: var(--color-accent-blue);
+       color: white;
+       border-color: var(--color-accent-blue);
+   }
+   .btn-hw-primary:hover {
+       background-color: transparent;
+       color: var(--color-accent-blue);
+       border-color: var(--color-accent-blue);
+   }
+   
+   .btn-hw-secondary {
+       background-color: transparent;
+       color: var(--color-text);
+       border-color: var(--color-text);
+   }
+   .btn-hw-secondary:hover {
+       background-color: var(--color-text);
+       color: white;
+   }
+   
+   /* Input Form Brutalis */
+   .form-control {
+       background-color: var(--color-background);
+       border-width: 2px;
+   }
+   .form-control:focus {
+       background-color: var(--color-background);
+       border-color: var(--color-accent-blue);
+       box-shadow: none;
+   }
+   
+   /* Gaya Kartu Brutalis */
+   .card-brutalist {
+       background-color: transparent;
+       border: 2px solid var(--color-text);
+       transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+   }
+   .card-brutalist:hover {
+       transform: translate(-6px, -6px);
+       box-shadow: 6px 6px 0 var(--color-accent-blue) !important;
+   }
+   
+   /* Navbar */
+   .navbar-brutalist {
+       background-color: var(--color-text) !important;
+       border-bottom: 4px solid var(--color-accent-blue) !important;
+       border-left: 0;
+       border-right: 0;
+       border-top: 0;
+   }
+   .navbar-brutalist .navbar-brand,
+   .navbar-brutalist .nav-link {
+       font-family: var(--font-ui);
+       color: white !important;
+       text-transform: uppercase;
+       padding: 8px 12px;
+   }
+   .navbar-brutalist .nav-link:hover {
+       background-color: var(--color-accent-blue);
+       color: white !important;
+   }
+   .navbar-brutalist .dropdown-menu {
+       background-color: var(--color-background);
+   }
+   .navbar-brutalist .dropdown-item {
+       font-family: var(--font-ui);
+       font-weight: bold;
+   }
+   .navbar-brutalist .dropdown-item:hover {
+       background-color: var(--color-accent-blue);
+       color: white;
+   }
+   
+   /* Carousel (UPDATED) */
+   .carousel-caption-brutalist {
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       background-color: var(--color-text);
+       padding: 1.5rem 2rem;
+       border-top: 4px solid var(--color-accent-blue);
+       text-align: left;
+   }
+   .carousel-caption-brutalist h1 {
+       font-family: var(--font-display);
+       font-size: 3rem;
+       color: white;
+       line-height: 1.1;
+       margin: 0;
+   }
+   .carousel-control-prev-icon, .carousel-control-next-icon {
+       background-color: var(--color-text);
+       border: 2px solid white;
+       width: 50px;
+       height: 50px;
+   }
+   
+   /* Category Circle (NEW) */
+   .category-circle-brutalist {
+       width: 180px;
+       height: 180px;
+       border-radius: 50%;
+       border: 2px solid var(--color-text);
+       background-color: white;
+       padding: 10px;
+       margin-left: auto;
+       margin-right: auto;
+       transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+   }
+   .category-circle-brutalist:hover {
+       transform: scale(1.05);
+       box-shadow: 0px 0px 0px 8px var(--color-accent-flame) !important;
+   }
+   .category-circle-brutalist img {
+       width: 100%;
+       height: 100%;
+       border-radius: 50%;
+       object-fit: cover;
+   }
+
+   /* Styling untuk Modal Kustom */
+.custom-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); z-index: 1055;
+    display: none; align-items: center; justify-content: center;
+}
+.custom-modal-content {
+    width: 90%; max-width: 500px;
+    background-color: var(--color-background); /* <-- TAMBAHKAN BARIS INI */
+}
+/* ... sisa CSS tidak berubah ... */
+   
+/* ==========================================================================
+   STYLING BRUTALIS UNTUK DATATABLES
+   ========================================================================== */
+
+/* Mengatur font untuk Info, Length, dan Search */
+.dt-info,
+.dt-length,
+.dt-search,
+.dt-empty {
+    font-family: var(--font-ui);
+    font-weight: bold;
+}
+
+/* Menghapus border default dari tabel dan menerapkan gaya brutalis */
+.table.dataTable {
+    border-collapse: collapse !important;
+    border: 2px solid var(--color-text) !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.table.dataTable th,
+.table.dataTable td {
+    border: 1px solid var(--color-border) !important;
+}
+
+.table.dataTable thead th {
+    font-family: var(--font-ui);
+    text-transform: uppercase;
+    background-color: var(--color-text);
+    color: white;
+    border-bottom: 4px solid var(--color-accent-blue) !important;
+}
+
+/* Menyesuaikan input search dan select */
+.dt-search input,
+.dt-length select {
+    padding: 0.5rem 0.75rem;
+    width: auto;
+    display: inline-block;
+}
+
+/* Menyesuaikan tombol paginasi */
+.dt-paging .dt-paging-button {
+    border: 2px solid var(--color-text) !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+    font-family: var(--font-ui);
+    font-weight: bold;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 2px;
+    transition: all 0.1s linear;
+}
+
+.dt-paging .dt-paging-button:hover {
+    background: var(--color-text) !important;
+    color: white !important;
+}
+
+.dt-paging .dt-paging-button.current,
+.dt-paging .dt-paging-button.current:hover {
+    background: var(--color-accent-blue) !important;
+    border-color: var(--color-accent-blue) !important;
+    color: white !important;
+}
+
+.dt-paging .dt-paging-button.disabled,
+.dt-paging .dt-paging-button.disabled:hover {
+    background: transparent !important;
+    color: var(--color-border) !important;
+    border-color: var(--color-border) !important;
+}
+
+/* Menyesuaikan pesan "Processing" */
+.dt-processing {
+    background-color: var(--color-accent-flame) !important;
+    color: white !important;
+    border: 2px solid var(--color-text) !important;
+    padding: 1rem;
+}
+
+/* Menyesuaikan layout agar lebih rapi */
+.dt-layout-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dt-layout-start,
+.dt-layout-end {
+    flex: 1 1 auto;
+}
+
+.dt-layout-end {
+    text-align: right;
+}
